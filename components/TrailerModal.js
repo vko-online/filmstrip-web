@@ -40,6 +40,10 @@ const TrailerModal = (props: {
         }
       };
 
+      document.body.onkeydown = (evt) => {
+        if(evt.keyCode === 27)
+          props.closeTrailerModal();
+      };
       el && el.addEventListener('touchend', handler);
     }}
   >
